@@ -1,0 +1,44 @@
+import math
+import random
+
+#=========== varible
+
+
+AA = [3.789456123,4.123456789,123.456123789]
+BB = (45.666666,37.99999,67.99999)
+
+#=========== decimal, isinstance(ตัวที่ต้องการให้ตรวจ , ขนิดที่กำหนด) เช็ตชนิด
+
+def rounding_1 (X):
+    if isinstance(X,list) : 
+        CD = [round(i,2) for i in X]
+        print(CD)
+    else :
+        print(f'The varible is not list')
+
+#rounding_1(BB)
+
+
+#=========== random, randint(เริ่มต้น,จบ), uniform
+
+def random_1 (X):
+    if isinstance(X,tuple) :
+      Random_Listing = [random.uniform(1,5) for i in X]
+      print(Random_Listing)
+    else :
+        print(f'The varible is not list')
+
+#random_1 (BB)
+
+
+#========== is_integer  วัดเเค่ว่าค่า value ลงตัวหรอมีเศษ
+
+def is_integer_test (X) :
+    if all(i.is_integer() for i in X) :
+        print('YEAH?!!!!!')
+    elif any(i.is_integer() for i in X):
+        print('Some is YEAH')
+    else:
+        print('NONE!!!!')
+
+is_integer_test(AA)
