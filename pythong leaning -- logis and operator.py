@@ -2,6 +2,10 @@
 email = "m.r.lionman@hotmail.com"
 phone = '043-221-843'
 username = ''
+AX1 = 'Dog'
+AX2 = 'Cat'
+AX3 = 'Door'
+
 
 
 #============== any() / all() / isinstance(object, classinfo) ตรวจ type เช่น  isinstance(XXXX, list) 
@@ -34,4 +38,44 @@ def Checking_info (X,Y,Z):
     else:
         print('Only work with string')
 
-Checking_info(email,phone,username)
+#Checking_info(email,phone,username)
+
+
+#======================== xxx.endswith('y'), xxx.startswith('y') 
+#string.startswith(prefix, start, end) / str.endswith(suffix, start, end)
+# collection.append(element)
+
+# list     [ ]	ได้	       .append(x) เพิ่มท้ายลิสต์
+# set      { }	ไม่ได้	    .add(x)
+# dict     {k: v}	ไม่ได้	    d[key] = value หรือ .update()
+# tuple    ( )	ไม่ได้     (แก้ไขไม่ได้)	สร้าง tuple ใหม่ เช่น t + (x,)
+# str      " "	ไม่ได้     (แก้ไขไม่ได้)	ต่อสตริงด้วย s + "x"
+
+
+# a = ['Dog', 'Door', 'Cat', 'Dog']
+
+# a.remove('Dog')   # ลบตัวแรกที่เจอตามค่า -> ['Door', 'Cat', 'Dog']
+# a.pop()           # ลบตัวสุดท้าย และคืนค่าที่ลบออกมา
+# a.pop(0)          # ลบตามตำแหน่ง (index) ที่ 0
+# del a[1]          # ลบตามตำแหน่ง (index) ที่ 1
+# a.clear()         # ลบทั้งหมด -> []
+
+# set	       .remove(x)  (ถ้าไม่มีค่าจะ error) หรือ .discard(x) (ถ้าไม่มีค่าก็ไม่ error)
+# dict	   del d[key] หรือ d.pop(key)
+# tuple / str	   ลบไม่ได้ เพราะแก้ไขไม่ได้ ต้องสร้างใหม่ เช่น s.replace('a', '')
+
+
+def S_check (Z,Y,X) :
+    DD = [Z,Y,X]
+    CC = []
+    FF = []
+    for i in DD :
+        if i.startswith('D') :
+            CC.append(i)
+            
+        else :
+            FF.append(i)
+    print(f'the value of CC is {CC} \n the value of FF is {FF}')
+
+    
+S_check(AX1,AX2,AX3)
