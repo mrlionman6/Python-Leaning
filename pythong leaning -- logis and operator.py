@@ -1,3 +1,6 @@
+import math
+import random
+
 
 email = "m.r.lionman@hotmail.com"
 phone = '043-221-843'
@@ -45,6 +48,10 @@ def Checking_info (X,Y,Z):
 #string.startswith(prefix, start, end) / str.endswith(suffix, start, end)
 # collection.append(element)
 
+
+
+#++++++++  .append() / .remove() เเละอื่นๆ
+
 # list     [ ]	ได้	       .append(x) เพิ่มท้ายลิสต์
 # set      { }	ไม่ได้	    .add(x)
 # dict     {k: v}	ไม่ได้	    d[key] = value หรือ .update()
@@ -78,4 +85,49 @@ def S_check (Z,Y,X) :
     print(f'the value of CC is {CC} \n the value of FF is {FF}')
 
     
-S_check(AX1,AX2,AX3)
+#S_check(AX1,AX2,AX3)
+
+
+#=======================
+# while i < 3 :
+# i+=1
+# operator ดูใน ภาพตัวอย่าง
+
+def Equal_checking () :
+    HH=[]
+    GG=[]
+    i = 0 
+    while i < 10 :
+        DD = [random.randint(1,1000)]
+        for d in DD :
+            PP = d % 2
+            if PP == 0 :
+                HH.append(DD[0])
+            else :
+                GG.append(DD[0])
+        i +=1
+
+    print(f'The even values are {HH} \n The odd value are {GG}')
+
+#Equal_checking()
+
+
+#==================
+
+def Randint_Path () :
+    UU = random.randint(500,600)
+    YY = random.randint(0,25)
+    FF = []
+    OO = []
+    i = 0
+    while i < 20 :
+        TT = random.randint(1,1000)
+        if TT <= UU :
+            FF.append(TT)
+        else :
+            OO.append(TT)
+        i += 1
+    print(f'The amount of numbers that more than {UU} \n are {FF} \n the least are {OO}')
+
+Randint_Path ()
+
