@@ -8,6 +8,8 @@ username = ''
 AX1 = 'Dog'
 AX2 = 'Cat'
 AX3 = 'Door'
+Alphabet_ENG = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t'
+                ,'u','v','w','x','y','z')
 
 
 
@@ -98,7 +100,7 @@ def Equal_checking () :
     GG=[]
     i = 0 
     while i < 10 :
-        DD = [random.randint(1,1000)]
+        DD = [random.randint(1,10)]
         for d in DD :
             PP = d % 2
             if PP == 0 :
@@ -115,19 +117,31 @@ def Equal_checking () :
 #==================
 
 def Randint_Path () :
-    UU = random.randint(500,600)
+    UU = random.randint(4,12)
     YY = random.randint(0,25)
     FF = []
     OO = []
+    YY = []
+    UP = []
     i = 0
-    while i < 20 :
-        TT = random.randint(1,1000)
+    while i < 13 :
+        TT = random.randint(0,25)
         if TT <= UU :
+        
             FF.append(TT)
+            YY.append(Alphabet_ENG[TT])
+
+            #GG = [x % 2  for x in (FF)]
         else :
             OO.append(TT)
+            UP.append(Alphabet_ENG[TT])
         i += 1
-    print(f'The amount of numbers that more than {UU} \n are {FF} \n the least are {OO}')
+    IO = len(FF)
+    print(IO)
+    #print(f'The Alpha Group are {FF} \n \twhich translate to {YY} \n The Beta groups are {OO} \n \twhich traslate to {UP}')
 
-Randint_Path ()
+# str.split(sep, maxsplit)  ตัวอย่าง s.split(",", 2) >> ['a', 'b', 'c,d,e'] เเบ่งด้วย "," เเละทำเเค่ 2 ตัว
+
+
+Randint_Path()
 
